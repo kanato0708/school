@@ -6,3 +6,4 @@
   GitHub Pagesにて、indexから各HTMLファイルのURLを取得し、サードパーティ製のソフトウェアでURLを発行。  
   教室等にQRコードを隠し、それを探す。
   
+8月13日現在のURLはコチラ→ https://kanato0708.github.io/school/
