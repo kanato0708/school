@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>クイズ</title>
+</head>
+
+<body>
+
+<script language="JavaScript">
+<!--
+function matchNum() {
+//不正解があったかどうかを確認するフラグ
+flag = 0;
+ans = "";
+
+//質問の答え
+ansArray = new Array();
+ansArray[0] = "かたおかちゅうがっこう";
+ansArray[1] = "2" ;
+ansArray[2] = "3" ;
+ansArray[3] = "4" ;
+ansArray[4] = "5" ;
+
+//採点（5の所は質問の数を入力）
+for ( i = 0 ; i < 5 ;i ++ ) {
+//不正解ページに表示する文
+ans = ans + "質問" + i + "：正解=" + ansArray[i] + " 貴方の回答=" + document.myForm.elements[i].value
+//一問でも不正解があったらフラグを1にする
+if (document.myForm.elements[i].value != ansArray[i]) {
+flag = 1;
+ans = ans + " 結果=×" + "<br>\n";
+} else {
+ans = ans + " 結果=○" + "<br>\n";
+}
+}
+
+//全問正解・不正解有り の判定
+if (flag == 0) {
+window.open("abc.html","good","");
+} else if (flag == 1) {
+retval = window.open("def.html","nogood","");
+retval.document.write (ans);
+}
+}
+//-->
+</script>
+
+<form name="myForm">
+質問０ ：<input type="text" name="myTEXT" ><br>
+質問１ ：<input type="text" name="myTEXT" value="2"><br>
+質問２ ：<input type="text" name="myTEXT" value="3"><br>
+質問３ ：<input type="text" name="myTEXT" value="4"><br>
+質問４ ：<input type="text" name="myTEXT" value=""><br>
+<input type="button" value=" Check " onClick="matchNum()">
+</form>
+
+</body>
+</html>
