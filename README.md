@@ -7,3 +7,5 @@
   教室等にQRコードを隠し、それを探す。
   
 8月13日現在のURLはコチラ→ https://kanato0708.github.io/school/
+8月29日現在のカスタムドメイン適用後のURLはコチラ→ www.school-event1947.com （カスタムドメインはお名前ドットコムで取得。￥0）
+
