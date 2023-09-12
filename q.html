@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>クイズアプリ</title>
+</head>
+<body>
+  <h1>クイズアプリ</h1>
+  <div id="quiz-container">
+    <p id="question"></p>
+    <label>
+      <input type="radio" name="choices" value="A"> <span id="choiceA"></span>
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="choices" value="B"> <span id="choiceB"></span>
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="choices" value="C"> <span id="choiceC"></span>
+    </label>
+    <br>
+    <button onclick="checkAnswer()">回答する</button>
+  </div>
+  <p id="result"></p>
+
+  <script>
+    const quizData = [
+      {
+        question: "最大の惑星は何ですか？",
+        choices: {
+          A: "地球",
+          B: "木星",
+          C: "火星"
+        },
+        correctAnswer: "B"
+      },
+      {
+        question: "首都が東京の国はどこですか？",
+        choices: {
+          A: "韓国",
+          B: "中国",
+          C: "日本"
+        },
+        correctAnswer: "C"
+      },
+      {
+        question: "2 + 2 は何ですか？",
+        choices: {
+          A: "3",
+          B: "4",
+          C: "5"
+        },
+        correctAnswer: "B"
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function displayQuestion() {
+      const currentQuestion = quizData[currentQuestionIndex];
+      const questionElement = document.getElementById("question");
+      const choiceAElement = document.getElementById("choiceA");
+      const choiceBElement = document.getElementById("choiceB");
+      const choiceCElement = document.getElementById("choiceC");
+
+      questionElement.textContent = currentQuestion.question;
+      choiceAElement.textContent = currentQuestion.choices.A;
+      choiceBElement.textContent = currentQuestion.choices.B;
+      choiceCElement.textContent = currentQuestion.choices.C;
+    }
+
+    function checkAnswer() {
+      const selectedChoice = document.querySelector('input[name="choices"]:checked');
+      if (!selectedChoice) {
+        alert("回答を選択してください");
+        return;
+      }
+
+      const userAnswer = selectedChoice.value;
+      const currentQuestion = quizData[currentQuestionIndex];
+      
+      if (userAnswer === currentQuestion.correctAnswer) {
+        score++;
+      }
+
+      currentQuestionIndex++;
+
+      if (currentQuestionIndex < quizData.length) {
+        displayQuestion();
+      } else {
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = `正解数: ${score}/${quizData.length}`;
+      }
+    }
+
+    displayQuestion();
+  </script>
+</body>
+</html>
