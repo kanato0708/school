@@ -1,0 +1,39 @@
+/* ヘッダーのスタイル */
+.header {
+  background-color: #3498db; /* 落ち着いた青色の背景 */
+  color: #fff; /* テキストカラーを白に設定 */
+  padding: 20px; /* 上下左右の余白 */
+  text-align: center; /* テキストを中央揃えに */
+}
+
+button {
+    background-color: #4c7faf;
+    border: #4c7faf;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+h1{
+    /* 水平方向の中央揃え */
+    text-align: center;
+  }
+
+.box8 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+
+.box8 p {
+    margin: 0; 
+    padding: 20;
+}
+
