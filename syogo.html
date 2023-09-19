@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>言葉の照合</title>
+</head>
+<body>
+    <h1>言葉の照合フォーム</h1>
+    <form action="#" method="post">
+        <label for="inputWord">照合する言葉を入力してください：</label>
+        <input type="text" id="inputWord" name="inputWord" required>
+        <br>
+        <input type="submit" value="照合">
+    </form>
+
+    <div id="result">
+        <php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $inputWord = $_POST["inputWord"];
+
+            // 照合する言葉をここで指定
+            $correctWord = "かたおかちゅうがっこう";
+
+            if ($inputWord === $correctWord) {
+                echo "<p>照合成功！指定の言葉と一致します。</p>";
+            } else {
+                echo "<p>照合失敗。指定の言葉と一致しません。</p>";
+            }
+        }
+        >
+    </div>
+</body>
+</html>

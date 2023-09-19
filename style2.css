@@ -1,0 +1,50 @@
+h1 {
+	margin: 10px 0px;
+	padding: 10px;
+	font-size: 24px;
+	font-style: italic;
+	color: #3e94da;
+	text-align: center;
+	border-top-width: 5px;
+	border-right-width: 0px;
+	border-bottom-width: 2px;
+	border-left-width: 0px;
+	border-top-style: double;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	font-weight: bold;
+	text-shadow: 3px 2px 2px #CCC;
+}
+
+button {
+    background-color: #4c7faf;
+    border: #4c7faf;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+h1{
+    /* 水平方向の中央揃え */
+    text-align: center;
+  }
+
+.box8 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+
+.box8 p {
+    margin: 0; 
+    padding: 20;
+}
+
